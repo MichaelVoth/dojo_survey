@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <style>
+        * {
+            padding: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav style="height: 50px;">
+
+    </nav>
+    <div id="container" style="display: flex; justify-content:space-around;">
+        <div id="survey_box" style="width: 800px; margin: 20px; background-color: lightgray; border: solid gray 3px;"
+            class="mb-3">
+            <h1>Dojo Survey</h1>
+            <form action="/process" method="post">
+                <label for="name" class="form-lable">Your Name:</label>
+                <input type="text" name="name" id="your_name">
+                <br>
+                <label for="location" class="form-lable">Dojo Location:</label>
+                <select name="location" id="your_location">
+                    <option value="Seattle">Seattle</option>
+                    <option value="Chicago">Chicago</option>
+                    <option value="San Diego">San Diego</option>
+                    <option value="New York">New York</option>
+                </select>
+                <br>
+                <label for="language" class="form-lable">Favorite language:</label>
+                <select name="language" id="your_language">
+                    <option value="Python">Python</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="C#">C#</option>
+                    <option value="CSS">CSS</option>
+                    <option value="HTML">HTML</option>
+                </select>
+                <br>
+                <label class="form-lable">Do you understand what you are doing?</label>
+                <label for="understood" class="form-lable">Yes</label>
+                <input type="radio" name="understood" id="yes_understanding" value="Yes">
+                <label for="understood" class="form-lable">No</label>
+                <input type="radio" name="understood" id="no_understanding" value="No">
+                <br>
+                <label class="form-lable">How will you celebrate finishing this assignment?</label>
+                <br>
+                <input type="checkbox" name="dancing" id="your_dancing" value="Dancing ">
+                <label for="dancing" class="form-lable">Dancing</label>
+                <input type="checkbox" name="drinking" id="your_drinking" value="Drinking ">
+                <label for="drinking" class="form-lable">A stiff drink</label>
+                <input type="checkbox" name="napping" id="your_napping" value="Napping ">
+                <label for="napping" class="form-lable">Napping</label>
+                <input type="checkbox" name="no_fun" id="your_not_fun" value="I won't be ">
+                <label for="no_fun" class="form-lable">I won't be</label>
+                <br>
+                <label for="comment" class="form-lable">Comment(Optional)</label>
+                <br>
+                <textarea name="comment" id="your_comment"></textarea>
+                <br>
+                <input type="submit" name="submit">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
